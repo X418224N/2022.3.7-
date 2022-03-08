@@ -1,0 +1,16 @@
+
+class Solution {
+public:
+    string convertToBase7(int num) {
+  int a=0;
+  int b=1;
+  string ans;
+  while(num){
+  a+=num%7*b;
+  b*=10;
+  num/=7;
+  }
+  ans=to_string(a);
+  return ans;
+  }
+}
